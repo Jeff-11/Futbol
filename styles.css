@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    position: relative;
+    background-color: gray;
+}
+
+#dots {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+ .dot {
+            border-radius: 50%;
+        }
+
+        
+.carousel-inner img {
+    height: 400px; /* altura de las imágenes */
+    object-fit: cover; /* mantiene la relación de aspecto */
+    display: block; /* elimina el espacio extra debajo de la imagen */
+    margin: 0 auto; /* centra la imagen horizontalmente */
+   
+}
+
+
+
+.carousel-caption {
+    background-image: url('fondo.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño para cubrir completamente el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    color: black; 
+    padding: 30px; /* relleno del texto */
+    font-size: 40px; /* Cambia el tamaño del texto */
+    text-align: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 0%; /* ancho de los botones de navegación */
+}
+
+
