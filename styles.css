@@ -14,33 +14,40 @@ body {
     z-index: -1;
 }
 
- .dot {
-            border-radius: 50%;
-        }
-
-        
-.carousel-inner img {
-    height: 400px; /* altura de las imágenes */
-    object-fit: cover; /* mantiene la relación de aspecto */
-    display: block; /* elimina el espacio extra debajo de la imagen */
-    margin: 0 auto; /* centra la imagen horizontalmente */
-   
+.dot {
+    border-radius: 50%;
 }
 
-
+.carousel-inner img {
+    max-width: 100%; /* Hace que la imagen sea responsive */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    display: block;
+    margin: 0 auto;
+}
 
 .carousel-caption {
-    background-image: url('fondo.jpg'); /* Ruta a tu imagen de fondo */
-    background-size: cover; /* Ajusta el tamaño para cubrir completamente el contenedor */
-    background-position: center; /* Centra la imagen de fondo */
-    color: black; 
-    padding: 30px; /* relleno del texto */
-    font-size: 40px; /* Cambia el tamaño del texto */
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    padding: 10% 5%; /* Ajusta el relleno en porcentajes para ser responsive */
+    font-size: 4vw; /* Utiliza unidades vw para el tamaño del texto, es responsive */
     text-align: center;
 }
 
 .carousel-control-prev, .carousel-control-next {
-    width: 0%; /* ancho de los botones de navegación */
+    width: 5%; /* Ancho de los botones de navegación, ajusta según tus necesidades */
 }
 
+/* Agrega media queries para ajustar estilos específicos en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 6vw; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+}
 
+@media (max-width: 576px) {
+    .carousel-caption {
+        font-size: 8vw; /* Ajusta el tamaño del texto para pantallas aún más pequeñas */
+    }
+}
